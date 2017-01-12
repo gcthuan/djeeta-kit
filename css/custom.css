@@ -4,10 +4,10 @@
  *	
  */
 
-body, section {			/* Change width and height to own preferences */
+/* Change width and height to own preferences */
+body, section {			
 	width: 500px;
 	height: 400px;
-	overflow-x: hidden;
 }
 
 /* Basic style tweaks */
@@ -18,3 +18,9 @@ section { padding: 5px;}
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }
 ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:window-inactive  { background: red; }
+
+/* Images collection*/
+.img-col {
+	height: 200px;
+	float: left;
+}
