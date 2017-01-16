@@ -1,14 +1,24 @@
 {
+	"characters_list": [
+		"Djeeta",
+		"Beatrix"
+	],
 	"characters": [
 		{
 			"name": "Djeeta",
 			"images": [
+				"http://i.imgur.com/lYb6d6J.png",
+				"http://i.imgur.com/lYb6d6J.png",
+				"http://i.imgur.com/lYb6d6J.png",
 				"http://i.imgur.com/lYb6d6J.png"
 			]
 		},
 		{
 			"name": "Beatrix",
 			"images": [
+				"https://i.imgur.com/ug3qRe7.png",
+				"https://i.imgur.com/ug3qRe7.png",
+				"https://i.imgur.com/ug3qRe7.png",
 				"https://i.imgur.com/ug3qRe7.png"
 			]
 		}

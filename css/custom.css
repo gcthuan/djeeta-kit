@@ -21,6 +21,6 @@ section { padding: 5px;}
 
 /* Images collection*/
 .img-col {
-	height: 200px;
+	width: 150px;
 	float: left;
 }
