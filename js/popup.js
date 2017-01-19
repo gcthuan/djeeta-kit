@@ -1,18 +1,6 @@
 $(document).ready(function() {
 	const path = "data.json";
 	LoadCollection(path);
-
-	$("li").click(function(v) {
-		alert("hi");
-		console.log(v.target.innerText);
-	});
-
-	// chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
- //  		chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
- //    		console.log(response);
- //  		});
-	// });
-
 	
 
 	// get images collection from data.json and show in popup
@@ -32,6 +20,9 @@ $(document).ready(function() {
 		    		$("#button-value")[0].innerText = v.target.innerText + " ";
 		    		$("#collection").empty();
 		    		LoadCharacter(characters, v.target.innerText);
+		    		$(".img-col").click(function(v) {
+		    			SaveCurrentCharacterUrl(v.target.src);
+		    		});
 		    	})
 		    }
 		});
@@ -49,5 +40,15 @@ $(document).ready(function() {
 		return characters.filter(function(data) {
 			return data.name == name;
 		})
+	}
+
+	function SaveCurrentCharacterUrl(url) {
+		chrome.storage.sync.set({'charUrl': url}, function() {
+			console.log("url is set!");
+		});
+	}
+
+	function test() {
+		console.log("test");
 	}
 });
