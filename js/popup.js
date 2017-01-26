@@ -12,12 +12,13 @@ $(document).ready(function() {
 		    	const charList = parsedData.characters_list;
 		    	const characters = parsedData.characters;
 		    	for (let key in charList) {
-		    		// const imagesArr = charList[key].images;
 		    		const dropdownHtml = '<li><a href="#">' + charList[key] + '</a></li>'
 		    		$(".dropdown-menu").append(dropdownHtml);
 		    	}
 		    	$("li").click(function(v) {
+		    		//change button name to the character's
 		    		$("#button-value")[0].innerText = v.target.innerText + " ";
+		    		//reload collection
 		    		$("#collection").empty();
 		    		LoadCharacter(characters, v.target.innerText);
 		    		$(".img-col").click(function(v) {
@@ -28,6 +29,7 @@ $(document).ready(function() {
 		});
 	}
 
+	//load char images of the selected char
 	function LoadCharacter(characters, name) {
 		const charImages = FindCharacter(characters, name)[0].images;
 		for (let key in charImages) {
@@ -42,13 +44,10 @@ $(document).ready(function() {
 		})
 	}
 
+	//save the current char img into local storage
 	function SaveCurrentCharacterUrl(url) {
 		chrome.storage.sync.set({'charUrl': url}, function() {
 			console.log("url is set!");
 		});
-	}
-
-	function test() {
-		console.log("test");
 	}
 });
