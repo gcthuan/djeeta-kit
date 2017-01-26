@@ -80,4 +80,4 @@ The main files you will need to edit are:
 
 - Contains extension height and width.
 - Once the extension breaks the height overflow, a styled CSS scroll bar is added.
-- Style tweaks are also present to deal with scroll bar presence.
+- Style tweaks are also present to deal with scroll bar presence.# djeeta-kit
