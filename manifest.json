@@ -27,7 +27,8 @@
 	"content_scripts": [
 		{
 			"matches": ["http://game.granbluefantasy.jp/*"],
-			"js": ["js/jquery-3.1.1.min.js", "js/myscript.js"]
+			"include_globs": ["*#mypage"],
+			"js": ["js/jquery-3.1.1.min.js", "js/bootstrap-switch.min.js", "js/myscript.js"]
 		}
 	]
 }

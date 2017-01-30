@@ -1,6 +1,52 @@
 $(document).ready(function() {
+	//toggle on/off
+
+	SetToggleButton();
 	const path = "data.json";
 	LoadCollection(path);
+	SwitchChange();
+
+	function SetToggleButton() {
+		chrome.storage.sync.get('isDisabled', function(result) {
+			console.log(result.isDisabled);
+			if (result.isDisabled === false) {
+				$("[name='on-off-checkbox']").bootstrapSwitch();
+			}
+			else {
+				$("[name='on-off-checkbox']").bootstrapSwitch();
+				$("[name='on-off-checkbox']").bootstrapSwitch('state', false);
+			}
+		});
+	}
+
+	function SwitchChange() {
+		$("[name='on-off-checkbox']").on('switchChange.bootstrapSwitch', function (event, state) {
+	   		if (state === false) {
+	   			console.log("false");
+	   			$("#select-char").attr("disabled", true);
+	   			chrome.storage.sync.get('prevImage', function(result) {
+	   				chrome.storage.sync.set({'prevImage': $("img.img-myimage").attr("src")}, function() {
+	   					return true;
+					});
+	   				chrome.storage.sync.set({'charUrl': result.prevImage}, function() {
+						return true;
+					});
+					
+	   			});
+	   			chrome.storage.sync.set({'isDisabled': true}, function() {
+	   				return true;
+	   			});
+	   		}
+	   		else {
+	   			console.log("true");
+	   			$("#select-char").attr("disabled", false);
+	   			chrome.storage.sync.set({'isDisabled': false}, function() {
+	   				return true;
+	   			});
+
+	   		}
+		});
+	}
 	
 
 	// get images collection from data.json and show in popup
@@ -48,6 +94,7 @@ $(document).ready(function() {
 	function SaveCurrentCharacterUrl(url) {
 		chrome.storage.sync.set({'charUrl': url}, function() {
 			console.log("url is set!");
+			return true;
 		});
 	}
 });
