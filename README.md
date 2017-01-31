@@ -1,7 +1,7 @@
 # Djeeta Kit Chrome Extension
 > An extension for freely changing your home character in Granblue Fantasy
 
-![Screenshot](http://i.imgur.com/C5KsCSH.jpg)
+![Screenshot](http://i.imgur.com/shPeFxJ.png)
 
 ## Jump to Section
 
@@ -26,7 +26,11 @@ This extension is made with Chrome Extension Twitter Bootstrap 3 Template(https:
 
 ## Usage
 
+Reload your page.
+
 Select the character and image you want to be your home image from the extension logo.
+
+Enjoy!
 
 ### Files to edit
 
@@ -34,5 +38,5 @@ The main files you will need to edit are:
 
 > data.json
 
-- This contains all of your extension characters and images information
+- This file contains all of your extension characters and images data.
 - You are free to edit this file to add or remove characters and images.
