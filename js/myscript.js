@@ -18,17 +18,21 @@ $(document).ready(function() {
 	});
 
 	function Checker() {
-		// console.log("checking");
-		const myImage = $("img.img-myimage");
-		if (myImage.attr("src") !== undefined) {
-			if (myImage.attr("src").includes("granbluefantasy")) {
-				chrome.storage.sync.set({'prevImage': myImage.attr("src")}, function() {
-					return true;
-				})
-				ReplaceImage(myImage);
-				StopInterval(myInterval);
+		chrome.storage.sync.get('isDisabled', function(result) {
+			if (result.isDisabled === false) {
+				const myImage = $("img.img-myimage");
+				if (myImage.attr("src") !== undefined) {
+					if (myImage.attr("src").includes("granbluefantasy")) {
+						chrome.storage.sync.set({'prevImage': myImage.attr("src")}, function() {
+							return true;
+						});
+						ReplaceImage(myImage);
+						StopInterval(myInterval);
+					}
+				}
 			}
-		}
+		});
+		
 	}
 
 	function ReplaceImage(myImage) {

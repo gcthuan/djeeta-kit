@@ -1,27 +1,92 @@
 {
 	"characters_list": [
 		"Djeeta",
-		"Beatrix"
+		"Beatrix",
+		"Clarisse",
+		"Lucio",
+		"Lyria",
+		"Nemone",
+		"Sturm & Drang",
+		"Yuisis",
+		"Zeta",
+		"Misc"
 	],
 	"characters": [
 		{
 			"name": "Djeeta",
 			"images": [
-				"http://i.imgur.com/lYb6d6J.png",
-				"http://i.imgur.com/Zu1McL3.png",
-				"http://gbf.game-a1.mbga.jp/assets_en/1485321976/img_mid/sp/assets/leader/my/310001_sw_1_01.png",
-				"http://gbf.game-a1.mbga.jp/assets_en/1485321976/img_mid/sp/assets/leader/my/100301_sw_1_01.png",
-				"http://gbf.game-a1.mbga.jp/assets_en/1485321976/img_mid/sp/assets/leader/my/120301_wa_1_01.png",
-				"http://gbf.game-a1.mbga.jp/assets_en/1485321976/img_mid/sp/assets/leader/my/180201_mc_1_01.png"
+				"http://i.imgur.com/brnj5Xu.png",
+				"http://i.imgur.com/k9O9hQi.png",
+				"http://i.imgur.com/hcd87SP.png",
+				"http://i.imgur.com/gnFg5n2.png",
+				"http://i.imgur.com/I3sCr7D.png",
+				"http://i.imgur.com/Af1JPnF.png",
+				"http://i.imgur.com/NuoZ8Lx.png",
+				"http://i.imgur.com/MglLBzx.png",
+				"http://i.imgur.com/WTWbBf3.png",
+				"http://i.imgur.com/pVusrDb.png"
+			]
+		},
+		{
+			"name": "Clarisse",
+			"images": [
+				"http://i.imgur.com/UXin6Lt.png",
+				"http://i.imgur.com/ce018mO.png"
 			]
 		},
 		{
 			"name": "Beatrix",
 			"images": [
-				"https://i.imgur.com/ug3qRe7.png",
-				"http://gbf.game-a1.mbga.jp/assets_en/1485321976/img_mid/sp/assets/npc/my/3040070000_01.png",
-				"https://i.imgur.com/ug3qRe7.png",
-				"https://i.imgur.com/ug3qRe7.png"
+				"http://i.imgur.com/MOsLKXA.png",
+				"http://i.imgur.com/pznBtDL.png",
+				"http://i.imgur.com/em2DLnJ.png"
+			]
+		},
+		{
+			"name": "Lucio",
+			"images": [
+				"http://i.imgur.com/wiNkktO.png",
+				"http://i.imgur.com/CTjrGvr.png"
+			]
+		},
+		{
+			"name": "Lyria",
+			"images": [
+				"http://i.imgur.com/wWR4kZI.png",
+				"http://i.imgur.com/o4xFBoY.png"
+			]
+		},
+		{
+			"name": "Nemone",
+			"images": [
+				"http://i.imgur.com/xValdNC.png",
+				"http://i.imgur.com/yUvRGWp.png"
+			]
+		},
+		{
+			"name": "Sturm & Drang",
+			"images": [
+				"http://i.imgur.com/kqxJuuh.png",
+				"http://i.imgur.com/wn7gUbh.png"
+			]
+		},
+		{
+			"name": "Yuisis",
+			"images": [
+				"http://i.imgur.com/hvRfiZi.png",
+				"http://i.imgur.com/vCUDx60.png"
+			]
+		},
+		{
+			"name": "Zeta",
+			"images": [
+				"http://i.imgur.com/3K2Rxwv.png"
+			]
+		},
+		{
+			"name": "Misc",
+			"images": [
+				"http://i.imgur.com/6hemVTX.png"
 			]
 		}
 	]

@@ -1,36 +1,46 @@
 $(document).ready(function() {
+	
 	//toggle on/off
-
 	SetToggleButton();
 	const path = "data.json";
 	LoadCollection(path);
-	SwitchChange();
+	
 
 	function SetToggleButton() {
 		chrome.storage.sync.get('isDisabled', function(result) {
-			console.log(result.isDisabled);
+			// console.log(result.isDisabled);
 			if (result.isDisabled === false) {
+				const toggleButtonHtml = $('<input id="toggle-button" type="checkbox" name="on-off-checkbox" checked>');
+				$("#on-off-div").append(toggleButtonHtml);
 				$("[name='on-off-checkbox']").bootstrapSwitch();
 			}
 			else {
+				const toggleButtonHtml = $('<input id="toggle-button" type="checkbox" name="on-off-checkbox">');
+				$("#on-off-div").append(toggleButtonHtml);
 				$("[name='on-off-checkbox']").bootstrapSwitch();
-				$("[name='on-off-checkbox']").bootstrapSwitch('state', false);
+				$("#select-char").attr("disabled", true);
 			}
+			//enable toggling
+			SwitchChange();
 		});
+		
 	}
 
 	function SwitchChange() {
+
+		console.log($("[name='on-off-checkbox']"));
+		
 		$("[name='on-off-checkbox']").on('switchChange.bootstrapSwitch', function (event, state) {
 	   		if (state === false) {
-	   			console.log("false");
+	   			// console.log("false");
 	   			$("#select-char").attr("disabled", true);
+	   			$("#collection").empty();
+	   			$("#button-value")[0].innerText = "Character ";
+
 	   			chrome.storage.sync.get('prevImage', function(result) {
-	   				chrome.storage.sync.set({'prevImage': $("img.img-myimage").attr("src")}, function() {
-	   					return true;
-					});
 	   				chrome.storage.sync.set({'charUrl': result.prevImage}, function() {
-						return true;
-					});
+	   					return true;
+	   				});
 					
 	   			});
 	   			chrome.storage.sync.set({'isDisabled': true}, function() {
@@ -38,8 +48,14 @@ $(document).ready(function() {
 	   			});
 	   		}
 	   		else {
-	   			console.log("true");
+	   			// console.log("true");
 	   			$("#select-char").attr("disabled", false);
+	   			chrome.storage.sync.get('prevImage', function(result) {
+	   				chrome.storage.sync.set({'charUrl': result.prevImage}, function() {
+	   					return true;
+	   				});
+	   			});
+
 	   			chrome.storage.sync.set({'isDisabled': false}, function() {
 	   				return true;
 	   			});
@@ -93,7 +109,6 @@ $(document).ready(function() {
 	//save the current char img into local storage
 	function SaveCurrentCharacterUrl(url) {
 		chrome.storage.sync.set({'charUrl': url}, function() {
-			console.log("url is set!");
 			return true;
 		});
 	}
