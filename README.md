@@ -15,14 +15,12 @@ This extension is made with Chrome Extension Twitter Bootstrap 3 Template(https:
 	
 ### Installation
 
-- Please either clone this repository or download as a ZIP file.
-- Extract the contents into your preferred working directory.
+- [Download](https://github.com/gcthuan/djeeta-kit/releases/download/1.0.0/DjeetaKit.crx) the extension.
 - Open your Google Chrome browser.
 - Enter `chrome://extensions/` into the address bar.
 - Ensure "Developer Mode" is ticked/enabled in the top right.
-- Click on "Load unpacked extension...".
-- Navigate to your extracted directory, and click "OK".
-- Your basic extension template should now be alongside your address bar, showing the extension logo.
+- Drag the .crx file into Chrome and select Add Extension.
+- The extension should now be alongside your address bar, showing the logo.
 
 ## Usage
 
