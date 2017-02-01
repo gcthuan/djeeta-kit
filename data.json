@@ -5,6 +5,9 @@
 		"Clarisse",
 		"Lucio",
 		"Lyria",
+		"Mena",
+		"Mina",
+		"Mona",
 		"Nemone",
 		"Sturm & Drang",
 		"Yuisis",
@@ -15,7 +18,7 @@
 		{
 			"name": "Djeeta",
 			"images": [
-				"http://i.imgur.com/brnj5Xu.png",
+				"http://i.imgur.com/BIy4Mn4.png",
 				"http://i.imgur.com/k9O9hQi.png",
 				"http://i.imgur.com/hcd87SP.png",
 				"http://i.imgur.com/gnFg5n2.png",
@@ -53,7 +56,38 @@
 			"name": "Lyria",
 			"images": [
 				"http://i.imgur.com/wWR4kZI.png",
-				"http://i.imgur.com/o4xFBoY.png"
+				"http://i.imgur.com/3aTWVCU.png",
+				"http://i.imgur.com/MLU30f4.png",
+				"http://i.imgur.com/IZYYlPY.png"
+			]
+		},
+		{
+			"name": "Mena",
+			"images": [
+				"http://i.imgur.com/dcZMEsY.png",
+				"http://i.imgur.com/gK4EACX.png",
+				"http://i.imgur.com/qbfQ2qE.png",
+				"http://i.imgur.com/gCgQqni.png",
+				"http://i.imgur.com/2jKUquZ.png"
+			]
+		},
+		{
+			"name": "Mina",
+			"images": [
+				"http://i.imgur.com/2J9Zc4y.png",
+				"http://i.imgur.com/xAzYdsy.png",
+				"http://i.imgur.com/4WSclPF.png",
+				"http://i.imgur.com/Gb38JKH.png",
+				"http://i.imgur.com/MB1GxFe.png"
+			]
+		},
+		{
+			"name": "Mona",
+			"images": [
+				"http://i.imgur.com/TfOSpnx.png",
+				"http://i.imgur.com/lGRDMDn.png",
+				"http://i.imgur.com/2LodNoT.png",
+				"http://i.imgur.com/mPNbiYh.png"
 			]
 		},
 		{
